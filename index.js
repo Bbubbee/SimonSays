@@ -110,7 +110,7 @@ function end_game()
     setTimeout(function() {
         $("body").removeClass("game-over"); 
     }, 100);
-    $("h1").text("Game Over, Press Enter To Start");
+    $("h1").html("<br>Game Over, Press Enter To Start");
 
 
     is_game_running = false; 
@@ -175,5 +175,7 @@ function button_animation(button)
 function play_sound(sound) 
 {
     var sound = new Audio("./sounds/"+sound+".mp3");
+    sound.volume = 0.3;
+
     sound.play(); 
 }
